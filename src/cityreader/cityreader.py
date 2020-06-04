@@ -76,7 +76,24 @@ for c in cities:
 # Tucson: (32.1558,-110.8777)
 # Salt Lake City: (40.7774,-111.9301)
 
-# TODO Get latitude and longitude values from the user
+# TODO Get latitude andlongitude  values from the user
+
+# FIRST LAT AND LON 
+print("Enter a latitude and longitude! Seperate with comma or it wont work :(")
+lat1, lon1 = [float(i) for i in input("lat1, lon1: ").split(',')] 
+while lat1 < -90 or lat1 > 90 or lon1 < -180 or lon1 > 180: # Normalize 
+  print("NOPE. Try again..") 
+  lat1, lon1 = input("lat1, lon1: ").split(',')
+
+
+# SECOND LAT AND LON
+print("Enter two more latitude and longitude coordinates! Seperate with comma, pls.")
+lat2, lon2 = [float(j) for j in input("Lat2, lon2: ").split(",")]
+while lat2 < -90 or lat2 > 90 or lon2 < -180 or lon2 > 180: # Normalize 
+  print("NOPE. Try again..") 
+  lat2, lon2 = input("lat2, lon2: ").split(',')
+
+
 
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
   # within will hold the cities that fall within the specified region
