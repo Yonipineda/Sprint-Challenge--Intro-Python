@@ -76,13 +76,14 @@ print("\n ----------------------")
 print("All names uppercase:")
 # g = [(i.age + 5, i.name.upper()) for i in humans] # For some reason the test did not like this.
 
+from copy import deepcopy
 def new_H(i): # param 
     i.age = i.age + 5
     i.name = i.name.upper()
 
     return i 
 
-g = [new_H(i) for i in humans]
+g = [new_H(deepcopy(i)) for i in humans]
 
 print(g)
 
